@@ -4,7 +4,7 @@ const fecha = document.getElementById('fecha')
 const mensajeTramos = document.getElementById('mensaje-tramos')
 
 function actualizarReloj() {  
-  const reloj = new Date();
+  const reloj = new Date();                                 
   const horaActual = {
     hours: String(reloj.getHours()).padStart(2, 0),
     min: String(reloj.getMinutes()).padStart(2, 0),
@@ -12,8 +12,8 @@ function actualizarReloj() {
   }
   
   const calendario = new Date()
-  const fechaActual = {
-    dateString: calendario.toLocaleDateString('es-ES', {
+  const fechaActual = {                                   // Para que la fecha tenga el formato DD/MM/AAAA solo hace falta esto: const fechaActual = calendario.toLocaleDateString("es-ES")
+    dateString: calendario.toLocaleDateString('es-ES', {               
       weekday: 'long',
       day: 'numeric',
       month: 'long',
