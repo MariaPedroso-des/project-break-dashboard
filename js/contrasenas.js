@@ -8,38 +8,40 @@ const caracteres = {
   simbols: '!@#$%^&*()-_=+'.split('')
 }
 
+const todos = Object.values(caracteres).flat()
+
+//Función para conseguir caracteres de forma aleatoria de cada elemento del objeto
 function random(arr) {
   return arr[Math.floor(Math.random() * arr.length)]
 }
 
+//Al hacer click
 btnPass.addEventListener('click',() => {
-  const lengthInput = Number(document.getElementById('length-input').value)
+  const lengthInput = Number(document.getElementById('length-input').value)  //Coge el valor que el usuario pone en el input
   if (lengthInput < 12 || lengthInput > 50) {
-    alert('El número de caracteres necesarios es entre 12 y 50')
-    return
+    return alert('El número de caracteres necesarios es entre 12 y 50')
   }
   const result = []
   
   Object.values(caracteres).forEach((arr) => {
-    const caracter = random(arr)
-    result.push(caracter)
+    result.push(random(arr))
   })
   
-  const todos = Object.values(caracteres).flat()
-  
   for (let i = 0; i < lengthInput - 4; i++) {
-    const caracter = random(todos)
-    result.push(caracter)
+    result.push(random(todos))
   }
   
-  for (let i = result.length -1; i > 0; i--) {
+  function shuffleResult(result) {
+    for (let i = result.length -1; i > 0; i--) {          //Algoritmo aleatoriedad: Fisher-Yates | 1ro último elemento, índice aleatorio con Math.random e intercambio de elementos  
     const j = Math.floor(Math.random()* (i + 1))
     const temporal = result[i]
     result[i] = result[j]
     result[j] = temporal
+    }
   }
 
   resultPass.innerHTML = `
     <div id ="resultado-pass" class ="resultado-pass">Esta es tu contraseña segura:</div>
     <div>${result.join('')}</div>`
 })
+
