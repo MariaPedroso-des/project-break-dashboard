@@ -14,13 +14,17 @@
     </a>
   </header>
   <main>
-    <form class="">
-      <fieldset>
-        <legend>Añade tu enlace de interés</legend>
-        <input type="text" id="Nombre-enlace" placeholder="Nombre de tu enlace">
-        <input type="text" id="url" placeholder="Introduce tu URL">
-      </fieldset>
-    </form>
+    <div class="container-links">
+      <h2>Añade tus enlaces de interés</h2>
+      <div class="container-input">
+        <input type="text" id="name-input" class="name-input" placeholder="Nombre del enlace" required/>
+        <input type="text" id="url-input" class="url-input" placeholder="Pega aquí la URL" required/>
+        <button id="btn-url" class="btn">Añadir enlace</button>
+      </div>
+      <div>
+        <ul id="espacio-links" class="espacio-links"></ul>
+      </div>
+    </div>
   </main>
   <script src="../script.js"></script>
   <script src="../js/links.js"></script>
