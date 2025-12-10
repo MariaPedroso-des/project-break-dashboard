@@ -19,7 +19,7 @@ function random(arr) {
 //Algoritmo aleatoriedad: Fisher-Yates | 1ro último elemento, índice aleatorio con Math.random e intercambio de elementos  
 function shuffleResult(result) {
   for (let i = result.length -1; i > 0; i--) {
-  const j = Math.floor(Math.random()* (i + 1))
+  const j = Math.floor(Math.random() * (i + 1))
   const temporal = result[i]
   result[i] = result[j]
   result[j] = temporal

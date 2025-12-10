@@ -67,6 +67,16 @@ table {
 	font-family: sans-serif;
 }
 
+::-webkit-scrollbar {
+	background-color: var(--color-black);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--color-green);
+	border-radius: 4px;
+}
+
 body {
 	background-image: url('./assets/img/alexander-x-zNsHLrQO4Gg-unsplash.jpg');
 	background-size: cover;
@@ -184,6 +194,7 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	align-items: left;
+	max-width: 40%;
 	padding: 40px;
 	gap: 32px;
 	border-radius: 40px;
@@ -199,7 +210,7 @@ h2 {
 
 .name-input, 
 .url-input {
-	min-height: 36px;
+	min-height: 40px;
 	border: none;
 	border-radius: 16px;
 	padding-left: 16px;
@@ -258,6 +269,72 @@ h2 {
 .btn-borrar:hover {
 opacity: 1;
 }
+
 .nombre-link:hover {
-	color: rgba(255, 255, 255, 0.278)
+	color: rgba(255, 255, 255, 0.593);
+}
+
+/*Weather*/
+.container-weather {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	padding: 40px;
+	gap: 32px;
+	width: 40%;
+	border-radius: 40px;
+	color: white;
+	background-color: var(--color-black,);
+}
+
+.hours-weather,
+.hours-data {
+	display: flex;
+	overflow-x:scroll;
+	flex: 0 0 auto;
+	min-width: 80%;
+	text-align: center;
+	padding: 0 0 16px 0;
+}
+
+.current-weather {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+
+}
+
+.current-data {
+	display:flex;
+	flex-direction: column;
+	align-items: baseline;
+	font-size: 26px;
+	font-weight: var(--font-bold);
+	font-family: var(--font-subtitles);
+	letter-spacing: 4px;
+}
+
+.listado-current {
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	gap: 16px;
+	font-size: 14px;
+	font-weight: var(--font-regular);
+	font-family: var(--font-text);
+	color: rgba(255, 255, 255, 0.593);
+
+}
+
+.hora-weather {
+	font-size: 14px;
+	font-weight: var(--font-bold);
+	font-family: var(--font-text);
+	color: rgba(255, 255, 255, 0.593);
+	padding-bottom: 16px;
+}
+
+.fuente {
+	font-size: 10px;
+	text-align: right;
 }
