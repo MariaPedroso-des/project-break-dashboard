@@ -82,7 +82,17 @@ body {
 	background-size: cover;
 }
 
-.cabecera {
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	color: var(--color-green);
+	letter-spacing: 4px;
+	font-family: var(--font-titles);
+	font-weight: var(--font-bold);
+}
+/* .cabecera {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -92,7 +102,7 @@ body {
 	letter-spacing: 4px;
 	font-family: var(--font-titles);
 	font-weight: var(--font-bold);
-}
+} */
 
 main {
 	display: flex;
@@ -115,6 +125,8 @@ h2 {
 	font-family: var(--font-text);
 	font-weight: var(--font-bold);
 }
+
+
 
 /*reloj*/
 #contenedor-reloj {

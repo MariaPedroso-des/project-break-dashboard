@@ -8,14 +8,55 @@
 </head>
 <body>
   <header>
-    <a href="./html/contrasenas.html" class="cabecera">
-      <img src="./assets/icons/clock.svg" alt="icon-clock">
-      <h1>RELOJ</h1>
-    </a>
+    <nav>
+      <div class="proyecto">Dashboard</div>
+      <ul class="menu-nav">
+        <li class="menu">
+          <a href="./index.html">Inicio</a>
+        </li>
+        <li class="menu">
+          <a href="./html/contrasenas.html">
+            <img src="./assets/icons/password.svg" alt="icon-pass">
+            Contraseñas
+          </a>
+        </li>
+        <li class="menu">
+          <a href="./html/links.html">
+            <img src="./assets/icons/link.svg" alt="icon-links">
+            Tus enlaces
+          </a>
+        </li>
+        <li class="menu">
+          <a href="./html/reloj.html">
+            <img src="./assets/icons/clock.svg" alt="icon-reloj">
+            Reloj
+          </a>
+        </li>
+        <li class="menu">
+          <a href="./html/tiempo.html">
+            <img src="./assets/icons/weather.svg" alt="icon-weather">
+            El tiempo
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
-
+  <main>
+    <section>
+      <div id="inContrasenas"></div>
+    </section>
+    <section>
+      <div id="inLinks"></div>
+    </section>
+    <section>
+      <div id="inReloj"></div>
+    </section>
+    <section>
+      <div id="inTiempo"></div>
+    </section>
+  </main>
   
-  <script src="./script.js"></script>
+  <script type="module" src="./script.js"></script>
   <script src="./js/contrasenas.js"></script>
   <script src="./js/links.js"></script>
   <script src="./js/reloj.js"></script>
