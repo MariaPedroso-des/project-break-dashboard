@@ -78,10 +78,11 @@ table {
 }
 
 body {
-	background-image: url('./assets/img/alexander-x-zNsHLrQO4Gg-unsplash.jpg');
 	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	transition: background-image 1s ease-in-out;
 }
-
 
 .menu {
 	display: flex;
@@ -105,10 +106,18 @@ body {
 } */
 
 main {
-	display: flex;
-  align-items: center;
-  justify-content: center;
-	min-height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin: 40px;
+	gap: 60px;
+	justify-items: center;
+	align-items: start;
+  min-height: 100vh;
+}
+
+section > div {
+	width: 100%;
+	max-width: 600px;
 }
 
 h2 {
@@ -129,7 +138,7 @@ h2 {
 
 
 /*reloj*/
-#contenedor-reloj {
+.container-reloj {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -138,6 +147,11 @@ h2 {
 	border-radius: 40px;
 	color: var(--color-red);
 	background-color: var(--color-black,);
+}
+
+.inContrasenas {
+	display: flex;
+	justify-content: center;
 }
 
 .hora {
@@ -161,7 +175,7 @@ h2 {
 	letter-spacing: 5px;
 	font-family: var(--font-titles);
 	font-weight: var(--font-black);
-	color: var(--color-violet);
+	color: rgba(255, 255, 255, 0.593);
 }
 
 /*Mediaqueries con los tamaños de las letras si la pantalla es más pequeña¿? Si da TIME*/
@@ -206,7 +220,6 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	align-items: left;
-	max-width: 40%;
 	padding: 40px;
 	gap: 32px;
 	border-radius: 40px;
@@ -248,7 +261,6 @@ h2 {
   margin-bottom: 16px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 
 .nombre-link {
 	font-family: var(--font-subtitles);
@@ -293,7 +305,6 @@ opacity: 1;
 	align-items: left;
 	padding: 40px;
 	gap: 32px;
-	width: 40%;
 	border-radius: 40px;
 	color: white;
 	background-color: var(--color-black,);
@@ -304,7 +315,6 @@ opacity: 1;
 	display: flex;
 	overflow-x:scroll;
 	flex: 0 0 auto;
-	min-width: 80%;
 	text-align: center;
 	padding: 0 0 16px 0;
 }
