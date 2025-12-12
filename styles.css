@@ -16,7 +16,7 @@
 	--font-black: 900; 
 }
 
-/*RESET*/
+/*RESET----------------------------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -61,7 +61,7 @@ table {
 	border-spacing: 0;
 }
 
-/*Mi código*/
+/*Mi código---------------------------------------------------------------------------*/
 
 *{
 	font-family: sans-serif;
@@ -84,35 +84,63 @@ body {
 	transition: background-image 1s ease-in-out;
 }
 
-.menu {
-	display: flex;
-	flex-direction: column;
-	text-decoration: none;
-	color: var(--color-green);
-	letter-spacing: 4px;
-	font-family: var(--font-titles);
-	font-weight: var(--font-bold);
-}
-/* .cabecera {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	padding: 16px;
-	text-decoration: none;
-	color: var(--color-green);
-	letter-spacing: 4px;
-	font-family: var(--font-titles);
-	font-weight: var(--font-bold);
-} */
-
 main {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	padding-top: 100px;
 	margin: 40px;
 	gap: 60px;
 	justify-items: center;
 	align-items: start;
   min-height: 100vh;
+}
+
+/*responsive-----------*/
+@media (max-width: 768px) {
+	main {
+		grid-template-columns: 1fr;
+		margin: 8px;
+		gap: 20px;
+	}
+}
+/*--------------------*/
+
+nav {
+	justify-content: space-between;
+	align-items: center;
+	border-radius:0 0 40px 40px;
+	letter-spacing: 4px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: flex;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	font-size: 24px;
+	font-family: var(--font-titles);
+	font-weight: var(--font-bold);
+	color: #353485;
+	background-color:  rgba(145, 145, 145, 0.564);
+}
+
+.menu-nav {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	padding-right: 32px;
+	list-style: none;
+	font-size: 12px;
+}
+
+.proyecto {
+padding-left: 24px;
+
+} 
+.menu img {
+	width: 24px;
+	height: 24px;
 }
 
 section > div {
@@ -135,9 +163,7 @@ h2 {
 	font-weight: var(--font-bold);
 }
 
-
-
-/*reloj*/
+/*Reloj---------------------------------------------------------------------------*/
 .container-reloj {
 	display: flex;
 	flex-direction: column;
@@ -147,11 +173,6 @@ h2 {
 	border-radius: 40px;
 	color: var(--color-red);
 	background-color: var(--color-black,);
-}
-
-.inContrasenas {
-	display: flex;
-	justify-content: center;
 }
 
 .hora {
@@ -164,7 +185,7 @@ h2 {
 
 .fecha {
 	vertical-align: baseline;
-	font-size: 28px;
+	font-size: 16px;
 	font-family: var(--font-subtitles);
 	font-weight: var(--font-regular);
 }
@@ -178,9 +199,7 @@ h2 {
 	color: rgba(255, 255, 255, 0.593);
 }
 
-/*Mediaqueries con los tamaños de las letras si la pantalla es más pequeña¿? Si da TIME*/
-
-/*Contraseñas*/
+/*Contraseñas---------------------------------------------------------------------------*/
 .container-pass {
 	display: flex;
 	flex-direction: column;
@@ -190,6 +209,11 @@ h2 {
 	border-radius: 40px;
 	color: white;
 	background-color: var(--color-black,);
+}
+
+.inContrasenas {
+	display: flex;
+	justify-content: center;
 }
 
 .length-min {
@@ -215,7 +239,7 @@ h2 {
 	font-family: var(--font-subtitles);
 }
 
-/*Links*/
+/*Links---------------------------------------------------------------------------*/
 .container-links {
 	display: flex;
 	flex-direction: column;
@@ -298,7 +322,7 @@ opacity: 1;
 	color: rgba(255, 255, 255, 0.593);
 }
 
-/*Weather*/
+/*Weather---------------------------------------------------------------------------*/
 .container-weather {
 	display: flex;
 	flex-direction: column;
@@ -307,7 +331,7 @@ opacity: 1;
 	gap: 32px;
 	border-radius: 40px;
 	color: white;
-	background-color: var(--color-black,);
+	background-color: var(--color-black);
 }
 
 .hours-weather,
