@@ -85,19 +85,26 @@ body {
 }
 
 main {
+	display: flex;
+	justify-content: center;
+	padding-top: 100px;
+	min-height: 100vh;
+	align-items: start;
+
+}
+
+main#grid-index {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	padding-top: 100px;
 	margin: 40px;
 	gap: 60px;
 	justify-items: center;
 	align-items: start;
-  min-height: 100vh;
 }
 
 /*responsive-----------*/
 @media (max-width: 768px) {
-	main {
+	main#grid-index {
 		grid-template-columns: 1fr;
 		margin: 8px;
 		gap: 20px;
@@ -184,6 +191,7 @@ h2 {
 	color: var(--color-red);
 	background-color: var(--color-black,);
 }
+
 
 .hora {
 	vertical-align: baseline;
